@@ -210,6 +210,11 @@ function App() {
             : <div className="preview-empty"><strong>Preview unavailable</strong><span>{hasMeetingInput ? generation.error : 'Enter meeting details to generate a preview.'}</span></div>}
         </section>
       </div>
+
+      <footer className="app-byline">
+        <p>Designed and architected by Ram Sundar Radhakrishnan.</p>
+        <p>Implemented with assistance by OpenAI GPT 5.6 Sol via Codex harness.</p>
+      </footer>
     </div>
   )
 }

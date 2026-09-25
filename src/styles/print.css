@@ -2,7 +2,7 @@
 
 @media print {
   html, body, #root { width: 1000px !important; height: 1400px !important; margin: 0 !important; padding: 0 !important; background: #fff !important; }
-  .app-header, .editor-panel, .preview-toolbar { display: none !important; }
+  .app-header, .editor-panel, .preview-toolbar, .app-byline { display: none !important; }
   .workspace, .preview-panel, .poster-viewport, .poster-scale-stage { display: block !important; width: 1000px !important; height: 1400px !important; min-height: 0 !important; margin: 0 !important; padding: 0 !important; overflow: visible !important; background: transparent !important; filter: none !important; }
   .poster-scale-stage > div { transform: none !important; }
   .agenda-poster { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
