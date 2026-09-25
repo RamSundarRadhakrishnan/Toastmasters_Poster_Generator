@@ -1,0 +1,76 @@
+body {
+  border-top: 6px solid var(--true-maroon);
+  background:
+    repeating-linear-gradient(135deg, rgb(0 65 101 / 2%) 0 2px, transparent 2px 8px),
+    var(--cool-gray);
+}
+.app-shell { width: min(1360px, 100%); min-height: calc(100vh - 6px); margin: 0 auto 52px; background: #fff; box-shadow: 0 0 34px rgb(26 42 49 / 24%); }
+.app-header {
+  position: relative;
+  min-height: 172px;
+  padding: 26px 42px;
+  overflow: hidden;
+  color: var(--ink);
+  background: linear-gradient(180deg, #fff 0%, #fff 72%, #f4f5f5 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+}
+.app-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 35%;
+  background:
+    radial-gradient(circle at 82% 34%, transparent 0 42px, rgb(242 223 116 / 38%) 43px 52px, transparent 53px),
+    linear-gradient(125deg, var(--loyal-blue), var(--blissful-blue));
+  clip-path: polygon(17% 0, 100% 0, 100% 100%, 0 100%);
+}
+.app-header::after { content: ''; position: absolute; right: 0; bottom: 0; left: 0; height: 7px; background: linear-gradient(90deg, var(--true-maroon) 0 74%, var(--happy-yellow) 74% 100%); }
+.app-brand { position: relative; z-index: 1; display: flex; align-items: center; gap: 24px; }
+.app-logo-frame { flex: 0 0 122px; width: 122px; height: 98px; padding: 8px 10px; display: grid; place-items: center; background: #fff; border: 1px solid #d9dedd; box-shadow: 0 7px 18px rgb(0 65 101 / 13%); }
+.app-logo-frame img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.app-header h1 { margin: 0 0 6px; color: var(--loyal-blue); font-family: 'Montserrat', Arial, sans-serif; font-size: clamp(27px, 3vw, 40px); line-height: 1.08; letter-spacing: -.025em; }
+.workspace { display: grid; grid-template-columns: 440px minmax(650px, 1fr); min-height: calc(100vh - 178px); background: var(--loyal-blue); }
+.editor-panel {
+  position: relative;
+  z-index: 2;
+  padding: 18px 18px 60px;
+  overflow: auto;
+  background:
+    radial-gradient(circle at 2px 2px, rgb(255 255 255 / 9%) 1.25px, transparent 1.5px) 0 0 / 9px 9px,
+    linear-gradient(150deg, var(--rich-maroon), var(--true-maroon));
+  border-right: 10px solid var(--happy-yellow);
+}
+.preview-panel { min-width: 0; background: linear-gradient(160deg, #183845, #002e48 65%, #001d2e); }
+.editor-toolbar { margin-bottom: 15px; padding: 12px; display: flex; flex-wrap: wrap; gap: 8px; background: var(--happy-yellow); box-shadow: 0 6px 0 rgb(59 1 4 / 20%); }
+.export-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.secondary-button, .primary-button, .text-button, .icon-button { border: 0; border-radius: 0; font-family: 'Montserrat', Arial, sans-serif; font-size: 12px; font-weight: 700; transition: background .15s ease, color .15s ease, border-color .15s ease; }
+.secondary-button { padding: 9px 12px; color: var(--loyal-blue); background: #fff; border: 1px solid var(--cool-gray); box-shadow: none; }
+.secondary-button:hover:not(:disabled) { color: #fff; background: var(--loyal-blue); border-color: var(--loyal-blue); }
+.primary-button { padding: 10px 15px; color: #fff; background: var(--true-maroon); border: 1px solid var(--true-maroon); }
+.primary-button:hover:not(:disabled) { background: var(--deep-maroon); border-color: var(--deep-maroon); }
+.text-button { padding: 4px 6px; color: var(--muted); background: transparent; }
+.text-button.danger { color: var(--true-maroon); }
+.icon-button { width: 36px; height: 36px; align-self: end; background: #f4e9eb; color: var(--true-maroon); font-size: 20px; }
+.preview-toolbar { position: relative; min-height: 72px; padding: 14px 18px; color: #fff; background: linear-gradient(90deg, #292f31, #15252c); border-bottom: 5px solid var(--happy-yellow); display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.preview-toolbar strong { color: #fff; font-family: 'Montserrat', Arial, sans-serif; font-size: 15px; }
+.preview-toolbar .secondary-button { color: #fff; background: transparent; border-color: rgb(255 255 255 / 42%); }
+.preview-toolbar .secondary-button:hover:not(:disabled) { color: var(--loyal-blue); background: var(--happy-yellow); border-color: var(--happy-yellow); }
+.preview-toolbar .primary-button { background: var(--true-maroon); border-color: #a9606c; }
+.poster-viewport { width: 100%; min-height: calc(100vh - 250px); padding: 34px 18px 64px; overflow: auto; display: flex; justify-content: center; align-items: flex-start; }
+.poster-scale-stage { flex: 0 0 auto; filter: drop-shadow(0 22px 30px rgb(0 0 0 / 36%)); }
+.preview-empty { margin: 40px; min-height: 300px; border: 1px dashed rgb(255 255 255 / 45%); display: grid; place-content: center; justify-items: center; gap: 8px; color: rgb(255 255 255 / 72%); }
+.preview-empty strong { color: var(--happy-yellow); font-family: 'Montserrat', Arial, sans-serif; }
+.validation-stack { margin: 0 0 14px; display: grid; gap: 6px; }
+.validation-message { padding: 10px 12px; border-left: 5px solid; border-radius: 0; font-size: 12px; line-height: 1.4; }
+.validation-message.error { color: #681b29; background: #fff; border-color: var(--true-maroon); }
+.validation-message.warning { color: #514500; background: #fff9dc; border-color: var(--happy-yellow); }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+@media (max-width: 1180px) { .app-shell { margin-bottom: 0; } .workspace { grid-template-columns: 410px minmax(560px, 1fr); } .preview-toolbar { align-items: flex-start; flex-direction: column; } }
+@media (max-width: 900px) { .app-header { align-items: flex-start; flex-direction: column; } .app-header::before { width: 46%; opacity: .22; } .workspace { display: block; } .editor-panel { border-right: 0; border-bottom: 10px solid var(--happy-yellow); } .preview-panel { min-height: 800px; } }
+@media (max-width: 580px) { .app-header { padding: 22px; } .app-header::before { display: none; } .app-brand { align-items: flex-start; } .app-logo-frame { flex-basis: 82px; width: 82px; height: 68px; padding: 6px; } .app-header h1 { font-size: 25px; } }

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title">
+  <title id="title">Club link QR placeholder</title>
+  <rect width="120" height="120" rx="6" fill="#fff"/>
+  <g fill="#071018">
+    <path d="M8 8h34v34H8zm7 7v20h20V15zm6 6h8v8h-8zM78 8h34v34H78zm7 7v20h20V15zm6 6h8v8h-8zM8 78h34v34H8zm7 7v20h20V85zm6 6h8v8h-8z"/>
+    <path d="M51 8h8v8h-8zM62 8h8v17h-8zM49 27h10v9H49zM50 43h8v8h-8zM64 34h8v17h-8zM78 50h10v9H78zM94 48h8v12h-8zM106 51h6v20h-6zM8 51h9v18H8zM22 50h9v8h-9zM34 54h8v17h-8zM47 61h9v9h-9zM61 55h10v19H61zM77 64h8v10h-8zM91 63h9v9h-9zM49 79h9v10h-9zM62 79h8v8h-8zM76 80h11v8H76zM93 78h8v18h-8zM105 82h7v9h-7zM48 95h13v8H48zM65 92h9v20h-9zM79 96h8v16h-8zM92 102h8v10h-8zM104 97h8v15h-8z"/>
+  </g>
+</svg>

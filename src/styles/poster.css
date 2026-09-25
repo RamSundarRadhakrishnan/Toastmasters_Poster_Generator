@@ -1,0 +1,88 @@
+.agenda-poster {
+  --poster-blue: #004165;
+  --poster-blue-bright: #006094;
+  --poster-maroon: #772432;
+  --poster-maroon-deep: #3b0104;
+  --poster-yellow: #f2df74;
+  --poster-gray: #a9b2b1;
+  --poster-fair: #f5f5f5;
+  --row-height: 27px;
+  --row-font: 13px;
+  --section-gap: 11px;
+  width: 1000px;
+  height: 1400px;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 166px 58px 1fr 64px;
+  color: #20292e;
+  background: var(--poster-fair);
+  border-top: 8px solid var(--poster-yellow);
+  font-family: 'Source Sans 3', 'Segoe UI', Arial, sans-serif;
+}
+.density-compact { --row-height: 24px; --row-font: 12px; --section-gap: 8px; }
+.density-dense { --row-height: 21px; --row-font: 11px; --section-gap: 5px; }
+.poster-header {
+  position: relative;
+  padding: 20px 34px 20px 30px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 162px 1fr;
+  align-items: center;
+  gap: 28px;
+  color: #fff;
+  background: linear-gradient(90deg, var(--poster-blue), var(--poster-blue-bright));
+}
+.poster-header::before { content: ''; position: absolute; top: -60px; right: 84px; width: 170px; height: 270px; background: rgb(255 255 255 / 6%); transform: skewX(-18deg); }
+.poster-header::after { content: ''; position: absolute; right: -66px; bottom: -118px; width: 210px; height: 210px; border: 24px solid rgb(242 223 116 / 22%); border-radius: 50%; }
+.club-logo { position: relative; z-index: 1; width: 154px; height: 120px; padding: 8px 9px; object-fit: contain; background: #fff; }
+.club-heading { position: relative; z-index: 1; padding-right: 30px; text-align: left; }
+.club-heading h1 { margin: 0 0 12px; color: #fff; font-family: 'Montserrat', Arial, sans-serif; font-size: 28px; line-height: 1.16; letter-spacing: .035em; text-transform: uppercase; }
+.club-heading p { margin: 0; color: rgb(255 255 255 / 86%); font-size: 13px; font-weight: 600; }
+.club-heading span { margin: 0 7px; color: var(--poster-yellow); }
+.meeting-strip { position: relative; z-index: 2; padding: 0 28px; display: grid; grid-template-columns: 1fr 1.7fr 1fr; align-items: center; color: #fff; background: linear-gradient(90deg, var(--poster-maroon-deep), var(--poster-maroon)); border-bottom: 4px solid var(--poster-yellow); font-family: 'Montserrat', Arial, sans-serif; font-size: 15px; }
+.meeting-strip strong:nth-child(2) { text-align: center; }
+.meeting-strip strong:last-child { text-align: right; }
+.meeting-strip span { color: rgb(255 255 255 / 78%); font-family: 'Source Sans 3', Arial, sans-serif; font-size: 12px; }
+.poster-body { min-height: 0; padding: 16px 16px 0; display: grid; grid-template-columns: 224px minmax(0, 1fr); gap: 13px; background: var(--poster-fair); }
+.poster-sidebar { min-height: 0; display: flex; flex-direction: column; overflow: hidden; background: var(--poster-blue); border-bottom: 8px solid var(--poster-yellow); }
+.theme-card { flex: 0 0 auto; min-height: 92px; padding: 13px 14px 15px; display: flex; flex-direction: column; justify-content: center; gap: 6px; color: var(--poster-maroon); background: var(--poster-yellow); text-align: center; }
+.theme-card span { font-family: 'Montserrat', Arial, sans-serif; font-size: 19px; font-weight: 700; }
+.theme-card strong { color: var(--poster-blue); font-family: 'Montserrat', Arial, sans-serif; font-size: 19px; line-height: 1.22; }
+.language-card { flex: 0 0 auto; padding: 18px 14px 17px; background: #fff; border-right: 1px solid #e2e5e4; border-left: 1px solid #e2e5e4; }
+.language-entry + .language-entry { margin-top: 16px; padding-top: 16px; border-top: 3px solid var(--poster-yellow); }
+.language-entry h3 { margin: 0; color: var(--poster-maroon); font-family: 'Montserrat', Arial, sans-serif; font-size: 16.5px; font-weight: 700; text-align: left; }
+.language-entry h4 { margin: 4px 0 8px; color: var(--poster-blue-bright); font-family: 'Montserrat', Arial, sans-serif; font-size: 19px; line-height: 1.18; text-align: left; }
+.language-entry p { margin: 7px 0; color: #30383c; font-size: 13.5px; line-height: 1.38; }
+.language-entry p strong { color: var(--poster-maroon); }
+.executive-card { min-height: 0; flex: 1 1 auto; padding: 0 10px 12px; display: flex; flex-direction: column; align-items: center; color: #fff; text-align: center; background: linear-gradient(180deg, var(--poster-blue-bright), var(--poster-blue)); }
+.executive-card h3 { width: calc(100% + 20px); margin: 0 0 12px; padding: 10px 5px; color: #fff; background: var(--poster-maroon); border-bottom: 3px solid var(--poster-yellow); font-family: 'Montserrat', Arial, sans-serif; font-size: 16.5px; font-weight: 700; }
+.executive-list { width: 100%; display: grid; gap: 7px; }
+.executive-list div { display: flex; flex-direction: column; line-height: 1.15; }
+.executive-list span { color: var(--poster-yellow); font-size: 13px; }
+.executive-list strong { font-size: 14.75px; font-weight: 600; }
+.club-qr { width: 88px; height: 88px; margin-top: auto; border: 6px solid #fff; }
+.poster-agenda { min-height: 0; overflow: hidden; }
+.agenda-column-headings, .agenda-row { display: grid; grid-template-columns: 76px 66px minmax(0, 1fr) 208px; }
+.agenda-column-headings { min-height: 43px; color: #fff; background: var(--poster-maroon); border-bottom: 4px solid var(--poster-yellow); font-family: 'Montserrat', Arial, sans-serif; font-size: 11px; font-weight: 700; text-align: center; text-transform: uppercase; }
+.agenda-column-headings span { display: grid; place-content: center; border-right: 1px solid rgb(255 255 255 / 14%); }
+.agenda-column-headings span:last-child { border-right: 0; }
+.agenda-section { margin-top: var(--section-gap); }
+.pre-meeting-section { margin-top: 4px; }
+.agenda-section h3 { height: 27px; margin: 0; padding-left: 10px; display: grid; place-content: center start; color: #fff; background: linear-gradient(90deg, var(--poster-blue), var(--poster-blue-bright)); border-left: 8px solid var(--poster-yellow); font-family: 'Montserrat', Arial, sans-serif; font-size: 11px; font-weight: 700; line-height: 1; text-align: left; text-transform: uppercase; letter-spacing: .04em; }
+.density-compact .agenda-section h3 { height: 23px; }
+.density-dense .agenda-section h3 { height: 20px; font-size: 9px; }
+.agenda-row { min-height: var(--row-height); background: #fff; font-size: var(--row-font); line-height: 1.05; }
+.agenda-row:nth-child(odd) { background: #f0f3f2; }
+.agenda-row > div { min-width: 0; padding: 3px 7px; display: flex; align-items: center; justify-content: center; border-right: 1px solid #d9dedd; border-bottom: 1px solid #d9dedd; text-align: center; }
+.agenda-row > div:first-child { color: var(--poster-blue); font-weight: 700; }
+.agenda-row > div:last-child { border-right: 0; }
+.agenda-row-highlighted { background: #fff9d7 !important; border-top: 1px solid #e1cb58; }
+.agenda-row-highlighted > div:first-child { color: var(--poster-maroon); }
+.agenda-item { flex-direction: column; gap: 1px; }
+.agenda-item span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.agenda-item small { color: #687276; font-size: .74em; }
+.agenda-speaker { color: #333a3e; font-weight: 600; text-transform: uppercase; }
+.poster-footer { position: relative; padding: 7px 36px 12px 254px; display: grid; place-items: center; color: rgb(255 255 255 / 80%); background: linear-gradient(90deg, var(--poster-blue), var(--poster-blue-bright)); border-top: 5px solid var(--poster-yellow); font-size: 11px; }
+.poster-footer::after { content: ''; position: absolute; right: 0; bottom: 0; width: 120px; height: 7px; background: var(--poster-maroon); }
+.poster-footer div { display: flex; flex-direction: column; text-align: center; }
+.poster-footer strong { color: #fff; font-family: 'Montserrat', Arial, sans-serif; font-size: 12px; }
